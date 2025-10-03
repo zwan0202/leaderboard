@@ -164,11 +164,11 @@ th {
 }
 
 .team-col {
-    width: 200px;
+    width: 150px;
 }
 
 .members-col {
-    width: 300px;
+    width: 380px;
 }
 
 .score-col {
@@ -191,7 +191,7 @@ tbody tr:hover {
 
 td {
     padding: 15px;
-    vertical-align: middle;
+    vertical-align: top;
 }
 
 /* Top 3 Rankings */
@@ -261,10 +261,13 @@ td {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
+    align-items: flex-start;
 }
 
 .member-card {
     text-align: center;
+    width: 80px;
+    flex-shrink: 0;
 }
 
 .member-photo {
@@ -274,12 +277,22 @@ td {
     object-fit: cover;
     border: 3px solid #667eea;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+    display: block;
 }
 
 .member-name {
-    font-size: 0.75em;
+    font-size: 0.7em;
     color: #666;
     margin-top: 5px;
+    word-break: break-word;
+    line-height: 1.2;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    min-height: 2.4em;
 }
 
 /* Clickable Score and Time */

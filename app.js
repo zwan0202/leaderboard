@@ -8,33 +8,44 @@ document.addEventListener('DOMContentLoaded', async function() {
 });
 
 function setupEventListeners() {
+    // Add Group
     document.getElementById('addGroupBtn').addEventListener('click', openAddGroupModal);
     
+    // Remove Groups
     document.getElementById('removeGroupBtn').addEventListener('click', removeSelectedGroups);
     
+    // Export
     document.getElementById('exportBtn').addEventListener('click', exportToJSON);
     
+    // Load JSON
     document.getElementById('loadJsonBtn').addEventListener('click', () => {
         document.getElementById('jsonFileInput').click();
     });
     
+    // File input change
     document.getElementById('jsonFileInput').addEventListener('change', loadFromJSONFile);
     
+    // Select all checkbox
     document.getElementById('selectAll').addEventListener('change', function() {
         const checkboxes = document.querySelectorAll('.group-checkbox');
         checkboxes.forEach(cb => cb.checked = this.checked);
     });
     
+    // Add member in modal
     document.getElementById('addMemberBtn').addEventListener('click', addMemberInput);
     
+    // Add group form submit
     document.getElementById('addGroupForm').addEventListener('submit', handleAddGroup);
     
+    // Edit score form submit
     document.getElementById('editScoreForm').addEventListener('submit', handleEditScore);
     
+    // Close modal
     document.querySelectorAll('.close, .close-modal').forEach(element => {
         element.addEventListener('click', closeModals);
     });
     
+    // Close modal when clicking outside
     window.addEventListener('click', function(event) {
         if (event.target.classList.contains('modal')) {
             closeModals();
@@ -78,7 +89,7 @@ function createLeaderboardRow(group, rank, groupsWithScores) {
         row.classList.add(`rank-${rank}`);
     }
     
-    // Rank column
+    // Rank
     const rankCell = document.createElement('td');
     rankCell.style.textAlign = 'center';
     if (shouldColor) {
@@ -88,18 +99,18 @@ function createLeaderboardRow(group, rank, groupsWithScores) {
     }
     row.appendChild(rankCell);
     
-    // Checkbox column
+    // Checkbox
     const checkboxCell = document.createElement('td');
     checkboxCell.style.textAlign = 'center';
     checkboxCell.innerHTML = `<input type="checkbox" class="group-checkbox" data-group-id="${group.id}">`;
     row.appendChild(checkboxCell);
     
-    // Team name column
+    // Team name
     const nameCell = document.createElement('td');
     nameCell.innerHTML = `<strong>${group.name}</strong>`;
     row.appendChild(nameCell);
     
-    // Members column
+    // Members
     const membersCell = document.createElement('td');
     const membersContainer = document.createElement('div');
     membersContainer.className = 'members-container';
@@ -108,8 +119,8 @@ function createLeaderboardRow(group, rank, groupsWithScores) {
         const memberCard = document.createElement('div');
         memberCard.className = 'member-card';
         memberCard.innerHTML = `
-            <img src="${member.photo}" alt="${member.name}" class="member-photo">
-            <div class="member-name">${member.name}</div>
+            <img src="${member.photo}" alt="${member.name}" class="member-photo" title="${member.name}">
+            <div class="member-name" title="${member.name}">${member.name}</div>
         `;
         membersContainer.appendChild(memberCard);
     });
@@ -117,7 +128,7 @@ function createLeaderboardRow(group, rank, groupsWithScores) {
     membersCell.appendChild(membersContainer);
     row.appendChild(membersCell);
     
-    // Score column
+    // Score
     const scoreCell = document.createElement('td');
     const scoreDiv = document.createElement('div');
     scoreDiv.className = 'clickable-score';
@@ -132,7 +143,7 @@ function createLeaderboardRow(group, rank, groupsWithScores) {
     scoreCell.appendChild(scoreDiv);
     row.appendChild(scoreCell);
     
-    // Last updated column
+    // Last updated
     const timeCell = document.createElement('td');
     const timeDiv = document.createElement('div');
     timeDiv.className = 'clickable-time';
@@ -190,7 +201,6 @@ function loadFromJSONFile(event) {
         try {
             const loadedGroups = JSON.parse(e.target.result);
             
-            // Validate the data structure
             if (!Array.isArray(loadedGroups)) {
                 throw new Error('Invalid JSON format: expected an array');
             }

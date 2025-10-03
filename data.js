@@ -1,127 +1,319 @@
 const FALLBACK_GROUPS = [
     {
-        "id": "group1",
-        "name": "Neural Translators",
+        "id": "AIC001",
+        "name": "AIC001",
         "members": [
             {
-                "name": "Alice Johnson",
-                "photo": "https://i.pravatar.cc/150?img=1"
+                "name": "Ngoc Cuong Hoang",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             },
             {
-                "name": "Bob Smith",
-                "photo": "https://i.pravatar.cc/150?img=2"
+                "name": "Phuong Tran Tran",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             },
             {
-                "name": "Carol Davis",
-                "photo": "https://i.pravatar.cc/150?img=3"
+                "name": "Le Quynh Nhu Doan",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             },
             {
-                "name": "David Brown",
-                "photo": "https://i.pravatar.cc/150?img=4"
-            }
-        ],
-        "bestScore": 0.8542,
-        "lastUpdated": null
-    },
-    {
-        "id": "group2",
-        "name": "Token Masters",
-        "members": [
-            {
-                "name": "Emma Wilson",
-                "photo": "https://i.pravatar.cc/150?img=5"
-            },
-            {
-                "name": "Frank Miller",
-                "photo": "https://i.pravatar.cc/150?img=6"
-            },
-            {
-                "name": "Grace Lee",
-                "photo": "https://i.pravatar.cc/150?img=7"
-            }
-        ],
-        "bestScore": 0.8123,
-        "lastUpdated": null
-    },
-    {
-        "id": "group3",
-        "name": "Transformer Squad",
-        "members": [
-            {
-                "name": "Henry Garcia",
-                "photo": "https://i.pravatar.cc/150?img=8"
-            },
-            {
-                "name": "Ivy Martinez",
-                "photo": "https://i.pravatar.cc/150?img=9"
-            },
-            {
-                "name": "Jack Robinson",
-                "photo": "https://i.pravatar.cc/150?img=10"
-            },
-            {
-                "name": "Kate Anderson",
-                "photo": "https://i.pravatar.cc/150?img=11"
-            }
-        ],
-        "bestScore": 0.7891,
-        "lastUpdated": null
-    },
-    {
-        "id": "group4",
-        "name": "COMET Seekers",
-        "members": [
-            {
-                "name": "Liam Taylor",
-                "photo": "https://i.pravatar.cc/150?img=12"
-            },
-            {
-                "name": "Mia Thomas",
-                "photo": "https://i.pravatar.cc/150?img=13"
-            }
-        ],
-        "bestScore": 0.7654,
-        "lastUpdated": null
-    },
-    {
-        "id": "group5",
-        "name": "Deep Learning Crew",
-        "members": [
-            {
-                "name": "Noah Jackson",
-                "photo": "https://i.pravatar.cc/150?img=14"
-            },
-            {
-                "name": "Olivia White",
-                "photo": "https://i.pravatar.cc/150?img=15"
-            },
-            {
-                "name": "Peter Harris",
-                "photo": "https://i.pravatar.cc/150?img=16"
+                "name": "Thi To Nu Dinh",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             }
         ],
         "bestScore": null,
         "lastUpdated": null
     },
     {
-        "id": "group6",
-        "name": "AI Pioneers",
+        "id": "AIC002",
+        "name": "AIC002",
         "members": [
             {
-                "name": "Quinn Martin",
-                "photo": "https://i.pravatar.cc/150?img=17"
+                "name": "Md Ahanaf Mubashshir Alvi",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             },
             {
-                "name": "Rachel Thompson",
-                "photo": "https://i.pravatar.cc/150?img=18"
+                "name": "Syed Haroon Ahmad",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             },
             {
-                "name": "Sam Garcia",
-                "photo": "https://i.pravatar.cc/150?img=19"
+                "name": "Mehraab Ferdouse",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             },
             {
-                "name": "Tina Lopez",
-                "photo": "https://i.pravatar.cc/150?img=20"
+                "name": "Simbarashe Mutyambizi",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC003",
+        "name": "AIC003",
+        "members": [
+            {
+                "name": "Quoc Chien Kieu",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Haohua Mai",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Musrat Jahan",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Ritiz Karkee",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC004",
+        "name": "AIC004",
+        "members": [
+            {
+                "name": "Liang Huang",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Simin Li",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Fuyu Li",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC005",
+        "name": "AIC005",
+        "members": [
+            {
+                "name": "Mahmuda Haque Mumu",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Ayushma Pandey",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC006",
+        "name": "AIC006",
+        "members": [
+            {
+                "name": "Abdurrahman Adeiza Aliyu",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Faiyaz Zaman",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Yee Chyi Too",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Ahnad As Saboor Siam",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC007",
+        "name": "AIC007",
+        "members": [
+            {
+                "name": "Surendra Phuyal",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Aakash shrestha",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Kushum Ranjitkar",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Dylan Tomlinson",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC008",
+        "name": "AIC008",
+        "members": [
+            {
+                "name": "Ayush Tiwari",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Tikaram Dumre",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC009",
+        "name": "AIC009",
+        "members": [
+            {
+                "name": "Sayeed Anwar",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Sonish khanal",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Mahmudur Rahman",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Shibbir Talukder",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC010",
+        "name": "AIC010",
+        "members": [
+            {
+                "name": "Jahidul Islam",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Ahsan Muhammad Saeed",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC011",
+        "name": "AIC011",
+        "members": [
+            {
+                "name": "Chathura Janadara Kodithuwakku Maddege",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Masachchige Ravidu Supun Karunathilaka",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Kavishka Himashana Ubeysekara",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Ishan Diluksha Sumanasekara Imbulana Liyanage",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC012",
+        "name": "AIC012",
+        "members": [
+            {
+                "name": "Tarik Bulut",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Hu Thanh Le",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC013",
+        "name": "AIC013",
+        "members": [
+            {
+                "name": "Romik Gurung",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Dipan Shrestha",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC014",
+        "name": "AIC014",
+        "members": [
+            {
+                "name": "Mohd Maqsoodali Ansari",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Saikat Barua",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC015",
+        "name": "AIC015",
+        "members": [
+            {
+                "name": "Anjan Shrestha",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Yukesh Chamlagain",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Rafsan Rahman",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            }
+        ],
+        "bestScore": null,
+        "lastUpdated": null
+    },
+    {
+        "id": "AIC016",
+        "name": "AIC016",
+        "members": [
+            {
+                "name": "Quang Thuan Nguyen",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
+            },
+            {
+                "name": "Nguyen Ba Dat Hoang",
+                "photo": "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTUwIiBoZWlnaHQ9IjE1MCIgZmlsbD0iI2UwZTBlMCIvPjxjaXJjbGUgY3g9Ijc1IiBjeT0iNjAiIHI9IjI1IiBmaWxsPSIjYjBiMGIwIi8+PHBhdGggZD0iTSAzMCAxMjAgUSAzMCA5MCA3NSA5MCBRIDEyMCA5MCAxMjAgMTIwIFoiIGZpbGw9IiNiMGIwYjAiLz48L3N2Zz4="
             }
         ],
         "bestScore": null,
