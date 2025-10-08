@@ -330,11 +330,6 @@ function handleEditScore(e) {
     
     const newScore = parseFloat(document.getElementById('newScore').value);
     
-    if (newScore < 0 || newScore > 1) {
-        alert('COMET score must be between 0 and 1');
-        return;
-    }
-    
     const group = groups.find(g => g.id === currentEditingGroupId);
     if (group) {
         group.bestScore = newScore;
